@@ -1,0 +1,108 @@
+@font-face {
+  font-family: 'calculate-profit-icons';
+  src:  url('fonts/calculate-profit-icons.eot?9tihsk');
+  src:  url('fonts/calculate-profit-icons.eot?9tihsk#iefix') format('embedded-opentype'),
+    url('fonts/calculate-profit-icons.ttf?9tihsk') format('truetype'),
+    url('fonts/calculate-profit-icons.woff?9tihsk') format('woff'),
+    url('fonts/calculate-profit-icons.svg?9tihsk#calculate-profit-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'calculate-profit-icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.calculator:before {
+  content: "\e91a";
+}
+.close-square:before {
+  content: "\e900";
+}
+.check-circle:before {
+  content: "\e901";
+}
+.info-circle:before {
+  content: "\e902";
+}
+.bell-off:before {
+  content: "\e903";
+}
+.increase-square:before {
+  content: "\e904";
+}
+.eye:before {
+  content: "\e905";
+}
+.eye-closed:before {
+  content: "\e906";
+}
+.decrease-square:before {
+  content: "\e907";
+}
+.danger-circle:before {
+  content: "\e908";
+}
+.check:before {
+  content: "\e909";
+}
+.sun:before {
+  content: "\e90a";
+}
+.settings:before {
+  content: "\e90b";
+}
+.moon:before {
+  content: "\e90c";
+}
+.search:before {
+  content: "\e90d";
+}
+.euro:before {
+  content: "\e90e";
+}
+.dollar:before {
+  content: "\e90f";
+}
+.arrow-left:before {
+  content: "\e910";
+}
+.arrow-right:before {
+  content: "\e911";
+}
+.user:before {
+  content: "\e912";
+}
+.star:before {
+  content: "\e913";
+}
+.logout:before {
+  content: "\e914";
+}
+.home:before {
+  content: "\e915";
+}
+.menu:before {
+  content: "\e916";
+}
+.celebrate:before {
+  content: "\e917";
+}
+.copy:before {
+  content: "\e918";
+}
+.bell:before {
+  content: "\e919";
+}

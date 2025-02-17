@@ -1,0 +1,37 @@
+<div class="w-full grid grid-cols-5 rounded-2xl p-3 shadow-md cursor-pointer secoundary-bg--color">
+  <div class="col-span-1">
+      <img
+        class="w-12 h-12 rounded-full p-1"
+        [src]="market().image"
+        [alt]="market().id"
+      />
+  </div>
+  <div class="col-span-2 flex flex-wrap">
+    <p class="w-full text-xl font-medium secoundary-color">
+      {{ market().name }}
+    </p>
+
+    <p class="w-full text-sm secoundary-color">
+      {{ currency() }}
+    </p>
+  </div>
+  <div class="col-span-1 flex flex-wrap">
+    @if(market().sparkline_in_7d?.price){
+    <app-price-chart
+      class="w-full"
+      [prices]="market().sparkline_in_7d?.price || []"
+    />
+    }
+  </div>
+  <div class="col-span-1 flex flex-wrap">
+    <p class="w-full text-slate-800 dark:text-white text-end">
+      {{ market().current_price | number }} $
+    </p>
+
+    <app-market-price-changes
+      class="w-full"
+      [high]="market().high_24h"
+      [low]="market().low_24h"
+    />
+  </div>
+</div>
