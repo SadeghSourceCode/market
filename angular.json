@@ -30,10 +30,12 @@
                 "glob": "**/*",
                 "input": "public"
               },
-               "src/404.html"
+               "src/404.html",
+               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/fonts/Font_Icons/font_icons.css"
             ],
             "scripts": []
           },
@@ -90,10 +92,12 @@
                 "glob": "**/*",
                 "input": "public"
               },
-               "src/404.html"
+               "src/404.html",
+               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/fonts/Font_Icons/font_icons.css"
             ],
             "scripts": []
           }

@@ -1,11 +1,11 @@
 import { Router } from '@angular/router';
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { CALCULATE_PAGE } from '../../shared/constants';
+import { Component, OnInit } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { IMarket } from '../../shared/model/interfaces';
+import { CALCULATE_PAGE } from '../../shared/constants';
 import { CoinEckoService } from '../../shared/services/coin-ecko.service';
 import { HeaderComponent } from '../../shared/components/header/header.component';
 import { MarketCardComponent } from "../../shared/components/market-card/market-card.component";
-import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +17,6 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   standalone: true,
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent implements OnInit {
   markets: IMarket[] = [];
