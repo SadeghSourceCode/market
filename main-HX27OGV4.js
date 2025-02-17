@@ -1,0 +1,1 @@
+import{a as p,b as t,c as r,d as e}from"./chunk-4Y6U5FEL.js";var i=[{path:"",loadComponent:()=>import("./chunk-A7ATYDB3.js").then(o=>o.AppComponent)}];var n={providers:[p({eventCoalescing:!0}),r(i)]};t(e,n).catch(o=>console.error(o));
