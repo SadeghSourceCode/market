@@ -1,0 +1,32 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '23.x'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the project
+        run: npm run build -- --configuration production
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          token: ${{ secrets.PERSONAL_TOKEN }}
+          branch: gh-pages 
+          folder: dist/market/browser
