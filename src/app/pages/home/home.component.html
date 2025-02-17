@@ -1,0 +1,9 @@
+<app-header [title]="('HOME_HEADER' | translate)" (actionButtonClicked)="headerButtonClicked($event)" />
+
+@if(!loading){
+  <div class="w-full flex flex-wrap mt-4">
+    @for (market of markets; track market) {
+    <app-market-card class="w-full mb-3" [market]="market" [currency]="currency" />
+    }
+  </div>
+}

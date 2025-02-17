@@ -1,0 +1,32 @@
+    <p
+      class="w-full text-sm text-end flex align-center justify-end gap-1"
+      [ngClass]="{
+        'text-red-500': (
+          high() | priceChangePercentage : low()
+        ).isNegative,
+        'text-green-500': (
+          high() | priceChangePercentage : low()
+        ).isPositive,
+        'text-gray-500': (
+          high() | priceChangePercentage : low()
+        ).isNeutral
+      }"
+    >
+      {{ (high() | priceChangePercentage : low()).percentage }}
+
+      @if((high() | priceChangePercentage : low()).isPositive){
+          <span>
+            <i class="fa fa-caret-up"></i>
+          </span>
+      }
+      @else if((high() | priceChangePercentage : low()).isNegative){
+            <span>
+                <i class="fa fa-caret-down"></i>
+            </span>
+      }
+      @else{
+        <span>
+            <i class="fa fa-minus"></i>
+        </span>
+      }
+    </p>

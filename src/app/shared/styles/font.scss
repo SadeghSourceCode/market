@@ -1,0 +1,188 @@
+// ? Estedad Font
+// ? Light
+@font-face {
+    font-family: ESTEDAD_LIGHT;
+    src: url("../../../assets/fonts/Estedad_v5/Static/woff2/Estedad-Light.woff2") format("woff2");
+    font-display: swap;
+}
+
+@mixin ESTEDAD_LIGHT {
+    font-family: ESTEDAD_LIGHT, sans-serif !important;
+}
+
+// ? Regular
+@font-face {
+    font-family: ESTEDAD_REGULAR;
+    src: url("../../../assets/fonts/Estedad_v5/Static/woff2/Estedad-Regular.woff2") format("woff2");
+    font-display: swap;
+}
+
+@mixin ESTEDAD_REGULAR {
+    font-family: ESTEDAD_REGULAR, sans-serif !important;
+}
+
+// ? Medium
+@font-face {
+    font-family: ESTEDAD_MEDIUM;
+    src: url("../../../assets/fonts/Estedad_v5/Static/woff2/Estedad-Medium.woff2") format("woff2");
+    font-display: swap;
+}
+
+@mixin ESTEDAD_MEDIUM {
+    font-family: ESTEDAD_MEDIUM, sans-serif !important;
+}
+
+// ? Bold
+@font-face {
+    font-family: ESTEDAD_BOLD;
+    src: url("../../../assets/fonts/Estedad_v5/Static/woff2/Estedad-Bold.woff2") format("woff2");
+    font-display: swap;
+}
+
+@mixin ESTEDAD_BOLD {
+    font-family: ESTEDAD_BOLD, sans-serif !important;
+}
+
+// ? Extra Bold
+@font-face {
+    font-family: ESTEDAD_EXTRA_BOLD;
+    src: url("/src/assets/fonts/Estedad_v5/Static/woff2/Estedad-ExtraBold.woff2");
+    font-display: swap;
+}
+
+@mixin ESTEDAD_EXTRA_BOLD {
+    font-family: ESTEDAD_EXTRA_BOLD, sans-serif !important;
+}
+
+// ? Thin
+@font-face {
+    font-family: ESTEDAD_THIN;
+    src: url("/src/assets/fonts/Estedad_v5/Static/woff2/Estedad-Thin.woff2");
+    font-display: swap;
+}
+
+@mixin ESTEDAD_THIN {
+    font-family: ESTEDAD_THIN, sans-serif !important;
+}
+
+// ? Extra Light
+@font-face {
+    font-family: ESTEDAD_EXTRA_LIGHT;
+    src: url("/src/assets/fonts/Estedad_v5/Static/woff2/Estedad-ExtraLight.woff2");
+    font-display: swap;
+}
+
+@mixin ESTEDAD_EXTRA_LIGHT {
+    font-family: ESTEDAD_EXTRA_LIGHT, sans-serif !important;
+}
+
+// ? Semi Bold
+@font-face {
+    font-family: ESTEDAD_SEMI_BOLD;
+    src: url("../../../assets/fonts/Estedad_v5/Static/woff2/Estedad-SemiBold.woff2") format("woff2");
+    font-display: swap;
+}
+
+@mixin ESTEDAD_SEMI_BOLD {
+    font-family: ESTEDAD_SEMI_BOLD, sans-serif !important;
+}
+
+// ! Farhang Font
+// ? Light
+@font-face {
+    font-family: FARHANG_LIGHT;
+    src: url("../../../assets/fonts/Farhang/woff/FarhangFaNum-Light.woff") format("woff2");
+    font-display: swap;
+}
+
+@mixin FARHANG_LIGHT {
+    font-family: FARHANG_LIGHT, sans-serif !important;
+}
+
+// ? Regular
+@font-face {
+    font-family: FARHANG_REGULAR;
+    src: url("../../../assets/fonts/Farhang/woff/FarhangFaNum-Regular.woff") format("woff2");
+    font-display: swap;
+}
+
+@mixin FARHANG_REGULAR {
+    font-family: FARHANG_REGULAR, sans-serif !important;
+}
+
+// ? Medium
+@font-face {
+    font-family: FARHANG_MEDIUM;
+    src: url("../../../assets/fonts/Farhang/woff/FarhangFaNum-Medium.woff") format("woff2");
+    font-display: swap;
+}
+
+@mixin FARHANG_MEDIUM {
+    font-family: FARHANG_MEDIUM, sans-serif !important;
+}
+
+// ? Bold
+@font-face {
+    font-family: FARHANG_BOLD;
+    src: url("../../../assets/fonts/Farhang/woff/FarhangFaNum-Bold.woff") format("woff2");
+    font-display: swap;
+}
+
+@mixin FARHANG_BOLD {
+    font-family: FARHANG_BOLD, sans-serif !important;
+}
+
+// ? Extra Bold
+@font-face {
+    font-family: FARHANG_EXTRA_BOLD;
+    src: url("../../../assets/fonts/Farhang/woff/FarhangFaNum-ExtraBold.woff") format("woff2");
+    font-display: swap;
+}
+
+@mixin FARHANG_EXTRA_BOLD {
+    font-family: FARHANG_EXTRA_BOLD, sans-serif !important;
+}
+
+// ? Thin
+@font-face {
+    font-family: FARHANG_THIN;
+    src: url("../../../assets/fonts/Farhang/woff/FarhangFaNum-Thin.woff") format("woff2");
+    font-display: swap;
+}
+
+@mixin FARHANG_THIN {
+    font-family: FARHANG_THIN, sans-serif !important;
+}
+
+// ? Extra light
+@font-face {
+    font-family: FARHANG_EXTRA_LIGHT;
+    src: url("../../../assets/fonts/Farhang/woff/FarhangFaNum-ExtraLight.woff") format("woff2");
+    font-display: swap;
+}
+
+@mixin FARHANG_EXTRA_LIGHT {
+    font-family: FARHANG_EXTRA_LIGHT, sans-serif !important;
+}
+
+// ? Semi Bold
+@font-face {
+    font-family: FARHANG_SEMI_BOLD;
+    src: url("../../../assets/fonts/Farhang/woff/FarhangFaNum-DemiBold.woff") format("woff2");
+    font-display: swap;
+}
+
+@mixin FARHANG_SEMI_BOLD {
+    font-family: FARHANG_SEMI_BOLD, sans-serif !important;
+}
+
+// ? BLACK
+@font-face {
+    font-family: FARHANG_BLACK;
+    src: url("../../../assets/fonts/Farhang/woff/FarhangFaNum-Black.woff") format("woff2");
+    font-display: swap;
+}
+
+@mixin FARHANG_BLACK {
+    font-family: FARHANG_BLACK, sans-serif !important;
+}

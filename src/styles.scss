@@ -1,1 +1,67 @@
-/* You can add global styles to this file, and also import other style files */
+@use "./app/shared/styles/font.scss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    @apply primary-bg--color;
+}
+
+* {
+    @apply font-['ESTEDAD_REGULAR'] transition-all duration-200;
+}
+
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+input {
+    @apply primary-color;
+}
+
+input,
+textarea {
+    @apply 
+    secoundary-bg--color 
+    border-none 
+    !p-4 
+    !rounded-2xl
+    placeholder:text-zinc-800 
+    dark:placeholder:text-gray-300 
+    focus:border-none 
+    focus:outline-none
+}
+
+.primary-bg--color {
+    @apply bg-[#ffffff] dark:bg-[#0F0B21];
+}
+
+.secoundary-bg--color {
+    @apply bg-[#7269FF] dark:bg-[#221C44];
+}
+
+.card-bg--color {
+    @apply bg-[#6C63FF];
+}
+
+.primary-color{
+    @apply text-[#7269FF] dark:text-[#fff];
+}
+
+.secoundary-color {
+    @apply text-[#0F0B21] dark:text-[#B2A8EE];
+}
+
+button{
+    @apply bg-[#2B3455] dark:bg-[#323546] text-white;
+}
