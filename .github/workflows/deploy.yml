@@ -28,5 +28,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
-          branch: gh-pages 
+          branch: master
           folder: dist/market/browser
