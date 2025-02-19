@@ -1,31 +1,32 @@
 <div class="w-full max-w-screen-sm mx-auto relative flex flex-wrap">
-  <div class="w-full">
-      <router-outlet />
+  <div class="w-full px-4">
+    <router-outlet />
   </div>
 
-<div class="w-full absolute bottom-0 left-0 p-4  border-t border-[#323546] dark:border-[#EFF2F5]">
   <div
-    class="w-full max-w-screen-xl mx-auto text-center text-xs text-gray-500 dark:text-gray-400"
+    class="w-full absolute bottom-0 left-0 py-2 border-t border-[#323546] dark:border-[#EFF2F5]"
   >
-  <nav>
-      <ul class="flex justify-around">
-          <li class="flex-1">
-              <button class="w-full py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">
-                  Home
-              </button>
+    <div
+      class="w-full max-w-screen-xl mx-auto text-center text-xs text-gray-500 dark:text-gray-400"
+    >
+      <nav>
+        <ul class="flex justify-around grid-cols-4">
+          @for (button of footerButtons; track $index) {
+          <li
+            class="col-span-1 opacity-60 border-b-2 border-b-transparent"
+            [ngClass]="{
+              'border-b-[#eaeaea] !opacity-100':
+                button.id === activeFooter
+            }"
+          >
+            <app-button
+              [item]="button"
+              (clickHandler)="footerClickHandler($event)"
+            />
           </li>
-          <li class="flex-1">
-              <button class="w-full py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">
-                  Profile
-              </button>
-          </li>
-          <li class="flex-1">
-              <button class="w-full py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">
-                  Settings
-              </button>
-          </li>
-      </ul>
-  </nav>
+          }
+        </ul>
+      </nav>
+    </div>
   </div>
-</div>
 </div>
