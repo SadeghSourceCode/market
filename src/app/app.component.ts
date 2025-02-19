@@ -64,7 +64,6 @@ export class AppComponent implements OnInit {
 
     this._router.events.subscribe(route => {
       if (route instanceof NavigationEnd) {
-        console.log("ROUTE ==> ", route.url);
         switch (route.url) {
           case '/':
             this.activeFooter = "FOOTER_HOME"

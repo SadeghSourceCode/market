@@ -2,7 +2,7 @@
 
 @if(!loading){
   <div class="w-full flex flex-wrap mt-4">
-    @for (market of markets; track market) {
+    @for (market of (markets() | marketSparkline : 10); track market) {
     <app-market-card class="w-full mb-3" [market]="market" [currency]="currency" />
     }
   </div>

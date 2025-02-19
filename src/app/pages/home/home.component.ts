@@ -1,11 +1,12 @@
 import { Router } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { IMarket } from '../../shared/model/interfaces';
 import { CALCULATE_PAGE } from '../../shared/constants';
 import { CoinEckoService } from '../../shared/services/coin-ecko.service';
 import { HeaderComponent } from '../../shared/components/header/header.component';
 import { MarketCardComponent } from "../../shared/components/market-card/market-card.component";
+import { MarketSparklinePipe } from '../../shared/pipes/market-sparkline.pipe';
 
 @Component({
   selector: 'app-home',
@@ -13,13 +14,14 @@ import { MarketCardComponent } from "../../shared/components/market-card/market-
     HeaderComponent,
     TranslateModule,
     MarketCardComponent,
+    MarketSparklinePipe,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   standalone: true,
 })
 export class HomeComponent implements OnInit {
-  markets: IMarket[] = [];
+  markets = signal<IMarket[]>([]);
   currency: string = 'usd';
   loading: boolean = true;
 
@@ -31,12 +33,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this._coinEckoService.getMarkets(this.currency, true)
       .subscribe(res => {
-        this.markets = res;
-        this.markets.forEach(market => {
-          if (market.sparkline_in_7d) {
-            market.sparkline_in_7d.price = market.sparkline_in_7d?.price?.slice(0, 10);
-          }
-        });
+        this.markets.set(res);
         this.loading = false;
       });
   }

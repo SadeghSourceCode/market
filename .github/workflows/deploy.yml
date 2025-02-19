@@ -16,13 +16,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '23.x'
+          node-version: '22.x'
 
       - name: Install dependencies
         run: npm install
 
       - name: Build the project
-        run: npm run build -- --configuration production --base-href/market/
+        run: npm run build -- --configuration production --base-hre/market/
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
