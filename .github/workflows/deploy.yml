@@ -21,10 +21,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Fetch i18n files
-        run: |
-          curl -o assets/i18n/fa.json https://sadeghsourcecode.github.io/market/assets/i18n/fa.json
-
       - name: Build the project
         run: npm run build -- --configuration production --base-href=/market/
 
@@ -33,4 +29,4 @@ jobs:
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
           branch: gh-pages 
-          folder: dist/market/browser
+          folder: dist/market/browser/
