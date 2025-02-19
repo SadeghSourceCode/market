@@ -10,12 +10,12 @@
       class="w-full max-w-screen-xl mx-auto text-center text-xs text-gray-500 dark:text-gray-400"
     >
       <nav>
-        <ul class="flex justify-around grid-cols-4">
+        <ul class="flex justify-around">
           @for (button of footerButtons; track $index) {
           <li
-            class="col-span-1 opacity-60 border-b-2 border-b-transparent"
+            class="opacity-60 border-b-2 border-b-transparent"
             [ngClass]="{
-              'border-b-[#eaeaea] !opacity-100':
+              '!border-b-[#EFF2F5] !opacity-100':
                 button.id === activeFooter
             }"
           >
