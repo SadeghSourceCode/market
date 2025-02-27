@@ -1,16 +1,17 @@
+import { CommonModule, DecimalPipe } from '@angular/common';
 import { Component, input } from '@angular/core';
-import { PriceChangePercentagePipe } from "../../pipes/price-change-percentage.pipe";
-import { CommonModule } from '@angular/common';
+import { MarketPriceChangePipe } from "../../pipes/market-price-change.pipe";
 
 @Component({
   selector: 'app-market-price-changes',
   imports: [
     CommonModule,
-    PriceChangePercentagePipe],
+    MarketPriceChangePipe
+  ],
   templateUrl: './market-price-changes.component.html',
-  styleUrl: './market-price-changes.component.scss'
+  styleUrl: './market-price-changes.component.scss',
+  providers:[DecimalPipe]
 })
 export class MarketPriceChangesComponent {
-  high = input.required<number | undefined>();
-  low = input.required<number | undefined>();
+  percentage = input.required<number | undefined>();
 }

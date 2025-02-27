@@ -7,6 +7,8 @@ import { CoinEckoService } from '../../shared/services/coin-ecko.service';
 import { HeaderComponent } from '../../shared/components/header/header.component';
 import { MarketCardComponent } from "../../shared/components/market-card/market-card.component";
 import { MarketSparklinePipe } from '../../shared/pipes/market-sparkline.pipe';
+import { DecimalPipe } from '@angular/common';
+import { LoadingComponent } from "../../shared/components/loading/loading.component";
 
 @Component({
   selector: 'app-home',
@@ -15,7 +17,8 @@ import { MarketSparklinePipe } from '../../shared/pipes/market-sparkline.pipe';
     TranslateModule,
     MarketCardComponent,
     MarketSparklinePipe,
-  ],
+    LoadingComponent
+],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   standalone: true,

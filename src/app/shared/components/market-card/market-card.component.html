@@ -1,4 +1,7 @@
-<div class="w-full grid grid-cols-5 rounded-2xl p-3 shadow-md cursor-pointer secoundary-bg--color">
+<div class="w-full grid grid-cols-6 rounded-2xl p-3 shadow-md secoundary-bg--color"
+[ngClass]="{'cursor-pointer': displayDetail()}"
+(click)="detail()"
+>
   <div class="col-span-1">
       <img
         class="w-12 h-12 rounded-full p-1"
@@ -23,15 +26,14 @@
     />
     }
   </div>
-  <div class="col-span-1 flex flex-wrap">
+  <div class="col-span-2 flex flex-wrap">
     <p class="w-full text-slate-800 dark:text-white text-end">
       {{ market().current_price | number }} $
     </p>
 
     <app-market-price-changes
       class="w-full"
-      [high]="market().high_24h"
-      [low]="market().low_24h"
+      [percentage]="market().price_change_percentage_24h"
     />
   </div>
 </div>

@@ -1,5 +1,6 @@
-import { IIconModel } from "./icon.interface";
-import { ButtonType } from "../types/application-component-types";
+import { ButtonType } from "../../types/application-component-types";
+import { IIconModel } from "../icon.interface";
+
 
 export interface IButton {
     id: string;

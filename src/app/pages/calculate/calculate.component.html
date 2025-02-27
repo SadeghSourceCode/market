@@ -5,66 +5,52 @@
     [back]="true"
   />
 
-  <div class="w-full my-4">
-    <label>{{"BUY_PRICE"| translate}}</label>
-    <input
-      class="mt-3 w-full"
-      type="text"
-      id="price"
-      name="price"
-      placeholder="{{ 'INSERT_PRICE' | translate }}"
-      [formControl]="priceControl"
-      autocomplete="off"
-    />
+  <div class="w-full my-4 flex gap-4 border-b border-b-[#323546] pb-4">
+    <div class="w-1/2">
+      <label>{{ "BUY_PRICE" | translate }}</label>
+      <input
+        class="mt-3 w-full"
+        type="text"
+        id="price"
+        name="price"
+        placeholder="{{ 'INSERT_PRICE' | translate }}"
+        [formControl]="priceControl"
+        autocomplete="off"
+      />
+    </div>
+    <div class="w-1/2">
+      <label>{{ "UNITS" | translate }}</label>
+      <input
+        class="mt-3 w-full"
+        type="text"
+        id="price"
+        name="price"
+        placeholder="{{ 'INSERT_UNITS' | translate }}"
+        [formControl]="unitControl"
+        autocomplete="off"
+      />
+    </div>
+  </div>
 
+  <div class="w-full flex gap-4">
     @if(stopLossPrice){
-    <div
-      class="w-full mt-4 cursor-pointer"
-      (click)="copyToClipboard(stopLossPrice)"
-    >
-      <div class="w-full flex flex-wrap align-center justify-between">
-        <span class="text-lg font-medium dir-rtl">
-          {{ "STOP_LOSSE" | translate }}
-        </span>
-        <div class="flex justify-end gap-2 items-center">
-          <span class="font-medium text-red-500">
-            {{ stopLossPrice.toString() }}
-          </span>
-          <span
-            [class]="
-              'icon ' +
-              (coppiedText === stopLossPrice && coppiedText
-                ? 'check-circle text-green-500'
-                : 'copy text-gray-500')
-            "
-          ></span>
-        </div>
-      </div>
-    </div>
+    <app-profit-card
+      class="flex w-1/2"
+      [profit]="{ price: stopLossPrice, isProfit: false }"
+    />
     } @if(profitPrice){
-    <div
-      class="w-full mt-4 cursor-pointer"
-      (click)="copyToClipboard(profitPrice)"
-    >
-      <div class="w-full flex flex-wrap align-center justify-between">
-        <span class="text-lg font-medium dir-rtl">
-          {{ "STOP_PROFIT" | translate }}
-        </span>
-        <div class="flex justify-end gap-2 items-center">
-          <span class="font-medium text-green-500">
-            {{ profitPrice.toString() }}
-          </span>
-          <span
-            [class]="
-              'icon ' +
-              (coppiedText === profitPrice && coppiedText
-                ? 'check-circle text-green-500'
-                : 'copy text-gray-500')
-            "
-          ></span>
-        </div>
-      </div>
-    </div>
+    <app-profit-card
+      class="flex w-1/2"
+      [profit]="{ price: profitPrice, isProfit: true }"
+    />
     }
   </div>
+
+  @if(profitMessage){
+  <div class="w-full mt-4">
+    <span class="text-lg font-medium dir-rtl">
+      {{ profitMessage }}
+    </span>
+  </div>
+  }
 </div>
