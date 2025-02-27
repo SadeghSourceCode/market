@@ -1,0 +1,1 @@
+import{Ea as t,Wa as n,Xa as r,gb as s}from"./chunk-SX66N3MW.js";var i=class o{static \u0275fac=function(e){return new(e||o)};static \u0275cmp=t({type:o,selectors:[["app-user-profile"]],decls:2,vars:0,template:function(e,a){e&1&&(n(0,"p"),s(1,"user-profile works!"),r())},encapsulation:2})};export{i as UserProfileComponent};

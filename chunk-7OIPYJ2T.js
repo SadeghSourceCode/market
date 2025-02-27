@@ -1,0 +1,1 @@
+import{Ea as n,Wa as s,Xa as o,gb as i}from"./chunk-SX66N3MW.js";var p=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-user-settings"]],decls:2,vars:0,template:function(e,a){e&1&&(s(0,"p"),i(1,"user-settings works!"),o())},encapsulation:2})};export{p as UserSettingsComponent};
