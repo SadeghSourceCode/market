@@ -1,32 +1,17 @@
-    <p
-      class="w-full text-sm text-end flex align-center justify-end gap-1"
-      [ngClass]="{
-        'text-red-500': (
-          high() | priceChangePercentage : low()
-        ).isNegative,
-        'text-green-500': (
-          high() | priceChangePercentage : low()
-        ).isPositive,
-        'text-gray-500': (
-          high() | priceChangePercentage : low()
-        ).isNeutral
-      }"
-    >
-      {{ (high() | priceChangePercentage : low()).percentage }}
+<p
+  class="w-full text-sm text-end flex align-center justify-end gap-1 text-red-500"
+  [ngClass]="{
+    '!text-green-500': (percentage() | marketPriceChange)?.positive
+  }"
+>
+  {{ (percentage() | marketPriceChange)?.value }}
 
-      @if((high() | priceChangePercentage : low()).isPositive){
-          <span>
-            <i class="fa fa-caret-up"></i>
-          </span>
-      }
-      @else if((high() | priceChangePercentage : low()).isNegative){
-            <span>
-                <i class="fa fa-caret-down"></i>
-            </span>
-      }
-      @else{
-        <span>
-            <i class="fa fa-minus"></i>
-        </span>
-      }
-    </p>
+  <span
+    [class]="
+      'icon ' +
+      ((percentage() | marketPriceChange)?.positive
+        ? 'arrow-up text-green-500'
+        : 'arrow-down text-red-500')
+    "
+  ></span>
+</p>

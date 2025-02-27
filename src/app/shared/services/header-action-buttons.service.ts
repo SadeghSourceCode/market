@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IButton } from '../model/interfaces/button.interface';
+import { IButton } from '../model/interfaces/base';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +19,7 @@ export class HeaderActionButtonsService {
       id: "HEADER_BACK",
       type: "icon-only",
       icon: {
-        name: "arrow-left",
+        name: "arrow-right",
         position: "right"
       },
       isDisabled: false,

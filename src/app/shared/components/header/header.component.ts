@@ -1,8 +1,8 @@
 import { ButtonComponent } from '../button/button.component';
 import { isPlatformBrowser, Location } from '@angular/common';
-import { IButton } from '../../model/interfaces/button.interface';
 import { Component, Inject, input, OnChanges, OnInit, output, PLATFORM_ID, SimpleChanges } from '@angular/core';
 import { HeaderActionButtonsService } from '../../services/header-action-buttons.service';
+import { IButton } from '../../model/interfaces/base';
 
 @Component({
   selector: 'app-header',

@@ -1,8 +1,9 @@
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { HeaderComponent } from "../../shared/components/header/header.component";
+import { ProfitCardComponent } from "../../shared/components/profit-card/profit-card.component";
 
 @Component({
   selector: 'app-calculate',
@@ -11,6 +12,7 @@ import { HeaderComponent } from "../../shared/components/header/header.component
     HeaderComponent,
     TranslateModule,
     ReactiveFormsModule,
+    ProfitCardComponent
 ],
   templateUrl: './calculate.component.html',
   styleUrl: './calculate.component.scss',
@@ -18,12 +20,16 @@ import { HeaderComponent } from "../../shared/components/header/header.component
 export class CalculateComponent {
 
   priceControl = new FormControl('');
+  unitControl = new FormControl('');
   stopLossPrice!: number;
   profitPrice!: number;
   coppiedText!: number;
 
+  profitMessage!: string;
+
   constructor(
     @Inject(PLATFORM_ID) private platformId: object,
+    private _translate: TranslateService,
   ) {
 
 
@@ -36,12 +42,33 @@ export class CalculateComponent {
         this.calculateProfit();
       }
     });
+
+    this.unitControl.valueChanges.subscribe((value) => {
+      if (value === null || isNaN(Number(value))) {
+        this.unitControl.setValue('');
+      }
+      else {
+        if (this.priceControl.value != null && this.priceControl.value !== '') {
+          const price = Number(this.priceControl.value);
+          this.profitMessage =
+            this._translate.instant(
+              'PROFIT_MESSAGE',
+              {
+                buyUnit: this.unitControl.value,
+                sellUnit: price / 0.2,
+                sellPrice: this.profitPrice
+              }
+            );
+        }
+      }
+    });
   }
 
   calculateProfit() {
     const price = Number(this.priceControl.value);
-    const profit = price * 0.1;
+    const profit = price * 0.2;
     this.profitPrice = price + profit;
+
   }
 
   calculateStopLoss() {

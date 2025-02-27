@@ -1,8 +1,8 @@
 import { Component, input, output } from '@angular/core';
 import { EventTrackerService } from '../../services/event-tracker.service';
 import { EEventNames } from '../../model/enums/event-names.enum';
-import { IButton } from '../../model/interfaces/button.interface';
 import { CommonModule } from '@angular/common';
+import { IButton } from '../../model/interfaces/base';
 
 @Component({
   selector: 'app-button',

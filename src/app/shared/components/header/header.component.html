@@ -1,10 +1,14 @@
-<div class="w-full grid grid-cols-6 py-2 min-h-[4rem] items-center bg-transparent">
-  <div class="col-span-5 items-center">
-    <span class="text-xl font-medium"> {{ title() }} </span>
-  </div>
+<div class="w-full grid grid-cols-7 py-2 min-h-[4rem] items-center bg-transparent">
   @if(actionButton){
-  <div class="col-span-1 flex justify-end items-center">
+  <div class="col-span-1 flex justify-start items-center">
     <app-button [item]="actionButton" (clickHandler)="clickHandler($event)"/>
   </div>
   }
+  <div class="col-start-2 col-end-7 items-center flex justify-center">
+    <span class="text-xl font-medium"> {{ title() }} </span>
+  </div>
+
+  <div class="col-span-1">
+
+  </div>
 </div>

@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { ButtonComponent } from "./shared/components/button/button.component";
-import { IButton } from './shared/model/interfaces';
-import { CALCULATE_PAGE } from './shared/constants';
+import { CALCULATE_PAGE, USER_PROFILE_PAGE, USER_SETTINGS_PAGE } from './shared/constants';
+import { IButton } from './shared/model/interfaces/base';
 
 @Component({
   selector: 'app-root',
@@ -71,18 +71,22 @@ export class AppComponent implements OnInit {
           case '/calculate':
             this.activeFooter = "FOOTER_CALCULATOR"
             break;
-          // case '/':
-          //   this.activeFooter = "FOOTER_HOME"
-          //   break;
+          case '/user-profile':
+            this.activeFooter = "FOOTER_PROFILE"
+            break;
+          case '/user-settings':
+            this.activeFooter = "FOOTER_SETTINGS"
+            break;
+          default:
+            this.activeFooter = "FOOTER_HOME"
+            break;
         }
       }
-      
+
     });
   }
 
   footerClickHandler(id: string) {
-    this.activeFooter = id;
-
     switch (id) {
       case "FOOTER_CALCULATOR":
         this._router.navigate([CALCULATE_PAGE]);
@@ -90,8 +94,11 @@ export class AppComponent implements OnInit {
       case "FOOTER_HOME":
         this._router.navigate(['/']);
         break;
-
-      default:
+      case "FOOTER_PROFILE":
+        this._router.navigate([USER_PROFILE_PAGE]);
+        break;
+      case "FOOTER_SETTINGS":
+        this._router.navigate([USER_SETTINGS_PAGE]);
         break;
     }
   }

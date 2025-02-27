@@ -1,0 +1,48 @@
+import { IKeyValue } from "../base";
+
+export interface ICoinMarketData {
+    current_price?: IKeyValue;
+    total_value_locked?: any;
+    mcap_to_tvl_ratio?: any;
+    fdv_to_tvl_ratio?: any;
+    roi?: any;
+    ath?: IKeyValue;
+    ath_change_percentage?: IKeyValue;
+    ath_date?: IKeyValue;
+    atl?: IKeyValue;
+    atl_change_percentage?: IKeyValue;
+    atl_date?: IKeyValue;
+    market_cap?: IKeyValue;
+    market_cap_rank?: number;
+    fully_diluted_valuation?: IKeyValue;
+    market_cap_fdv_ratio?: number;
+    total_volume?: IKeyValue;
+    high_24h?: IKeyValue;
+    low_24h?: IKeyValue;
+    price_change_24h?: number;
+    price_change_percentage_24h?: number;
+    price_change_percentage_7d?: number;
+    price_change_percentage_14d?: number;
+    price_change_percentage_30d?: number;
+    price_change_percentage_60d?: number;
+    price_change_percentage_200d?: number;
+    price_change_percentage_1y?: number;
+    market_cap_change_24h?: number;
+    market_cap_change_percentage_24h?: number;
+    price_change_24h_in_currency?: IKeyValue;
+    price_change_percentage_1h_in_currency?: IKeyValue;
+    price_change_percentage_24h_in_currency?: IKeyValue;
+    price_change_percentage_7d_in_currency?: IKeyValue;
+    price_change_percentage_14d_in_currency?: IKeyValue;
+    price_change_percentage_30d_in_currency?: IKeyValue;
+    price_change_percentage_60d_in_currency?: IKeyValue;
+    price_change_percentage_200d_in_currency?: IKeyValue;
+    price_change_percentage_1y_in_currency?: IKeyValue;
+    market_cap_change_24h_in_currency?: IKeyValue;
+    market_cap_change_percentage_24h_in_currency?: IKeyValue;
+    total_supply?: number;
+    max_supply?: number;
+    max_supply_infinite?: boolean;
+    circulating_supply?: number;
+    last_updated?: string;
+}
